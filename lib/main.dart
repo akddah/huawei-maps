@@ -6,7 +6,7 @@
     You may obtain a copy of the License at
 
         https://www.apache.org/licenses/LICENSE-2.0
-
+//// "s"
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,8 +29,7 @@ import 'components/heatMapDemo.dart';
 import 'components/liteModeDemo.dart';
 import 'huaweiMapDemo.dart';
 
-void main() =>
-    runApp(MaterialApp(title: "Hms Map Flutter Plugin Demo", home: HomePage()));
+void main() => runApp(MaterialApp(title: "Hms Map Flutter Plugin Demo", home: HomePage()));
 
 class HomePage extends StatefulWidget {
   @override
@@ -71,8 +70,7 @@ class _HomePageState extends State<HomePage> {
                   bottom: Radius.circular(50),
                 ),
               ),
-              child: LayoutBuilder(
-                  builder: (BuildContext context, BoxConstraints constraints) {
+              child: LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
                 top = constraints.biggest.height;
                 return FlexibleSpaceBar(
                   centerTitle: true,
@@ -110,23 +108,19 @@ class _HomePageState extends State<HomePage> {
               CustomCard(
                 imagePath: "assets/map.jpg",
                 text: "Map Options",
-                subText:
-                    "Map Listeners, Traffic, Map Type, Camera Animation and more",
+                subText: "Map Listeners, Traffic, Map Type, Camera Animation and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HuaweiMapDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HuaweiMapDemo()));
                 },
               ),
               CustomCard(
                 imagePath: "assets/marker.jpg",
                 text: "Markers",
-                subText:
-                    "Listeners, Animations, Marker Clustering, Info Windows and more",
+                subText: "Listeners, Animations, Marker Clustering, Info Windows and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MarkerDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MarkerDemo()));
                 },
               ),
               CustomCard(
@@ -135,8 +129,7 @@ class _HomePageState extends State<HomePage> {
                 subText: "Listeners, Color Settings, Stroke Settings and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CircleDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CircleDemo()));
                 },
               ),
               CustomCard(
@@ -145,8 +138,7 @@ class _HomePageState extends State<HomePage> {
                 subText: "Listeners, Patterns, Caps and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PolylineDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => PolylineDemo()));
                 },
               ),
               CustomCard(
@@ -155,8 +147,7 @@ class _HomePageState extends State<HomePage> {
                 subText: "Listeners, zIndex and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PolygonDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => PolygonDemo()));
                 },
               ),
               CustomCard(
@@ -165,10 +156,7 @@ class _HomePageState extends State<HomePage> {
                 subText: "Listeners, Size, Transparency and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GroundOverlayDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => GroundOverlayDemo()));
                 },
               ),
               CustomCard(
@@ -177,21 +165,16 @@ class _HomePageState extends State<HomePage> {
                 subText: "Tiles, URL Tiles, Tile Caches and more",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => TileOverlayDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TileOverlayDemo()));
                 },
               ),
               CustomCard(
                 imagePath: "assets/heatMap.png",
                 text: "Heat Maps",
-                subText:
-                    "Display the density and distribution of crowd or cars",
+                subText: "Display the density and distribution of crowd or cars",
                 textColor: Colors.white,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HeatMapDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HeatMapDemo()));
                 },
               ),
               CustomCard(
@@ -200,8 +183,7 @@ class _HomePageState extends State<HomePage> {
                 textColor: Colors.white,
                 subText: "Create static map images easily",
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LiteModeDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LiteModeDemo()));
                 },
               ),
               Padding(
@@ -225,16 +207,13 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(8.0),
                 child: MaterialButton(
                   onPressed: () async {
-                    double? result = await HuaweiMapUtils.distanceCalculator(
-                        start: LatLng(41.048641, 28.977033),
-                        end: LatLng(41.063984, 29.033135));
+                    double? result = await HuaweiMapUtils.distanceCalculator(start: LatLng(41.048641, 28.977033), end: LatLng(41.063984, 29.033135));
 
                     setState(() {
                       if (result != null) distance = result;
                     });
                   },
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   color: Color.fromRGBO(18, 26, 55, 1),
                   textColor: Colors.white,
                   splashColor: Colors.redAccent,
@@ -262,8 +241,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
                 child: Text(
                   "It converts only WGS84 coordinates in China territory to GCJ02 coordinates.",
                   textAlign: TextAlign.center,
@@ -280,8 +258,7 @@ class _HomePageState extends State<HomePage> {
                       convertedLatLng = result;
                     });
                   },
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   color: Color.fromRGBO(18, 26, 55, 1),
                   textColor: Colors.white,
                   splashColor: Colors.redAccent,
@@ -293,9 +270,7 @@ class _HomePageState extends State<HomePage> {
                   ? SizedBox.shrink()
                   : Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(convertedLatLng!.lat.toString() +
-                          " : " +
-                          convertedLatLng!.lng.toString()),
+                      child: Text(convertedLatLng!.lat.toString() + " : " + convertedLatLng!.lng.toString()),
                     ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
@@ -304,8 +279,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18.0),
                 child: Text(
                   "This method enables/disables the HMSLogger capability which is used for sending usage analytics of Map SDK's methods to improve the service quality.",
                   textAlign: TextAlign.center,
@@ -323,8 +297,7 @@ class _HomePageState extends State<HomePage> {
                       hmsLoggerStatus = true;
                     }
                   },
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   color: Color.fromRGBO(18, 26, 55, 1),
                   textColor: Colors.white,
                   splashColor: Colors.redAccent,
